@@ -40,7 +40,7 @@ def saferun(func, state: dict):
     """Безопасное выполнение функции агента с повторами."""
     while True:
         try:
-            time.sleep(1)
+            time.sleep(5)
             return func(state)
         except Exception as e:
             print(f"⚠️  Ошибка в saferun: {e}")
@@ -138,7 +138,7 @@ def create_multi_agent_graph(auth_key: str):
 
 
 if __name__ == "__main__":
-    AUTH_KEY = "ENTER_KEY"
+    AUTH_KEY = "ENTER_KEY=="
     ARTICLE_URL = "https://habr.com/ru/companies/spbifmo/articles/343320/"
 
     graph = create_multi_agent_graph(AUTH_KEY)

@@ -11,7 +11,7 @@ class SummariserAgent:
 
     def run(self, state: dict) -> dict:
 
-        article_text1 = state.get("rubric_result_rubricator", "")
+        article_text1 = state.get("article_text", "")
 
         prompt = open('./agent_system/prompt_summariser.txt', 'r', encoding='utf-8').read()
 
